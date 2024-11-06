@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>Web</title>
+    </head>
+    <style>
+        .grid-container{
+            background-color: darkblue;
+            height:300px;
+            width:400px;
+            grid-template-columns: auto auto auto;
+            display: grid;
+            padding: 0%;
+            grid-gap:20px; 
+        }
+
+        .left1{
+            background-color: rgb(255, 0, 0);
+            color: red;
+            font-size: 50px;
+            align-content: center;
+            border-right: 15px solid white;
+            border-bottom:15px solid white;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start:1;
+            grid-row-end:6;     
+        }
+
+        .center1{
+            background-color: darkblue;
+            height:2px;
+            color: rgb(255, 255, 255);
+            font-size:20x;
+            grid-column-start:1;
+            grid-column-end:4;
+            align-content: center;
+
+           
+        }
+
+        .right1{
+            background-color: rgb(255, 0, 0);
+            color: red;
+            font-size: 50px;
+            border-left:15px solid white;
+            border-bottom: 15px solid white;
+            align-content: center;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start:1;
+            grid-row-end:6;  
+        }
+
+        .left2{
+            background-color: rgb(255, 0, 0);
+            color: red;
+            font-size: 50px;
+            align-content: center;
+            grid-column-start: 1;
+            grid-column-end:2;
+            border-top: 15px solid rgb(255, 255, 255);
+            border-right: 15px solid white;
+        }
+
+        .right2{
+            background-color: red;
+            color: red;
+            font-size: 50px;
+            align-content: center;
+            grid-column-start: 2;
+            grid-column-end:4;
+            border-top: 15px solid rgb(255, 255, 255);
+            border-left: 15px solid white;
+        }
+        
+       .grid-container:hover{
+        .left1{
+            color:darkblue;
+        }
+        .right1{
+            color:darkblue;
+        }
+        .left2{
+            color:darkblue;
+        }
+        .right2{
+            color:darkblue;
+        }
+       }
+
+       .marquee-text{
+        display: inline-block;
+        animation: scroll-left 10s linear infinite;
+        white-space: nowrap;
+        font-size: 1.5rem;
+        color: white;
+       }
+
+       .grid-container:hover .marquee-text{
+        animation-play-state: paused;
+       }
+
+       @keyframes scroll-left{
+        from{
+            transform: translateX(-100%);
+        }
+        to{
+            transform: translateX(100%);
+        }
+       }
+
+    </style>
+    <body>
+    <center>
+        <h1>NORWAY</h1>
+        <div class="grid-container">
+            <div class="left1">NO</div>
+            <div class="center1"><div class="marquee-text">NORWAY</div></div>
+            <div class="right1">R</div>
+            <div class="left2">W</div>
+            <div class="right2">AY</div>
+            
+        </div>
+    </center>
+    </body>
+</html>
